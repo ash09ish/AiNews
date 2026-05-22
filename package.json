@@ -1,0 +1,22 @@
+{
+  "name": "newsvision-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Real-time AI news analysis platform with React, Express, MongoDB, Socket.IO, and Hugging Face Transformers.",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace server\" \"npm run dev --workspace client\"",
+    "build": "npm run build --workspace client",
+    "start": "npm run start --workspace server",
+    "lint": "npm run lint --workspace client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}

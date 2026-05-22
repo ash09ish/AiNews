@@ -1,0 +1,23 @@
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+  app:
+    build: .
+    restart: unless-stopped
+    environment:
+      PORT: 5000
+      CLIENT_ORIGIN: http://localhost:5173
+      MONGODB_URI: mongodb://mongo:27017/newsvisionai
+      JWT_SECRET: docker-development-secret-change-me
+      HF_ENABLE_TRANSFORMERS: "false"
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+volumes:
+  mongo-data:

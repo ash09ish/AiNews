@@ -1,0 +1,4 @@
+NewsVision AI API running on http://localhost:5055
+[0mGET /api/health [32m200[0m 16.313 ms - 80[0m
+[0mGET /api/news/getnews?limit=3 [32m200[0m 2.017 ms - 4273[0m
+[0mPOST /api/auth/register [32m201[0m 413.394 ms - 319[0m

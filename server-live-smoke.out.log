@@ -1,0 +1,2 @@
+NewsVision AI API running on http://localhost:5060
+[0mGET /api/news/getnews?limit=2 [32m200[0m 13.021 ms - 3068[0m
